@@ -1,6 +1,6 @@
 <?php 
 
-namespace MongoSeach;
+namespace MongoSearch;
 
 class Finder {
 
@@ -13,7 +13,7 @@ class Finder {
   {
    
     $this->collectionName = $collectionName;
-    $m = new MongoClient(); // connect
+    $m = new \MongoClient(); // connect
     $this->client = $m;
     $this->db = $m->selectDB($dbName);
 
@@ -23,8 +23,7 @@ class Finder {
   public function find($query) {
 
    $result = $this->db->command(array("text" => $this->collectionName, 'search' => $query ));
-   print_r($result);
-   die();
+   return $result;
 
   }
 
