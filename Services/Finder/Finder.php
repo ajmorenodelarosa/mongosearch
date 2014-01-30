@@ -1,6 +1,6 @@
 <?php 
 
-namespace MongoSearch\Services\Finder;
+namespace MongoSearchBundle\Services\Finder;
 
 class Finder {
 

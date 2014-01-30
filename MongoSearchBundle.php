@@ -1,6 +1,6 @@
 <?php
 
-namespace MongoSearch;
+namespace MongoSearchBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
