@@ -10,8 +10,6 @@
 
     <services>
         <service id="mongosearch.finder" class="%mongosearch.finder.class%">
-            <!--<argument>%search.sphinxsearch.indexer.bin%</argument>
-            <argument>%search.sphinxsearch.indexes%</argument>-->
         </service>
     </services>
 </container>
