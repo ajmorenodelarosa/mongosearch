@@ -33,7 +33,7 @@ $finder = $this->get('mongosearch.finder')->finder('UserManagementBundle:User',$
 $finder->find("test", $limit, $offset);
 ```
 
-We will work to allow performe more advanced searches in future
+We will work to allow performe more advanced searches in future releases
 
 
 
