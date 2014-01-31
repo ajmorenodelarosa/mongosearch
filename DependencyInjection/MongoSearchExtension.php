@@ -18,27 +18,7 @@ class MongoSearchExtension extends Extension
 
                 $loader->load('mongosearch.xml');
 
-                /**
-                 * Indexer.
-                 */
-                
-		/*if( isset($config['indexer']) ) {
-                        $container->setParameter('search.sphinxsearch.indexer.bin', $config['indexer']['bin']);
-                }*/
-
-                /**
-                 * Indexes.
-                 */
-                //$container->setParameter('search.sphinxsearch.indexes', $config['indexes']);
-                  
-                /**
-                 * Searchd.
-                 */
-                /*if( isset($config['searchd']) ) {
-                        $container->setParameter('search.sphinxsearch.searchd.host', $config['searchd']['host']);
-                        $container->setParameter('search.sphinxsearch.searchd.port', $config['searchd']['port']);
-                        $container->setParameter('search.sphinxsearch.searchd.socket', $config['searchd']['socket']);
-                }*/
+       
         }
 
         public function getAlias()
