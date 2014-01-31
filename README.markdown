@@ -9,6 +9,7 @@ Installation:
 
 How you actually download the bundle is entirely up to you.  The easiest way is to grab it from [packagist.org](http://packagist.org/).
 
+[https://packagist.org/packages/ajmorenodelarosa/mongosearch](https://packagist.org/packages/ajmorenodelarosa/mongosearch)
 
 
 Usage examples:
