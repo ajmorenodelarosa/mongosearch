@@ -41,7 +41,7 @@ License:
 --------
 
 ```
-Copyright (c) 2014, Antoni José Moreno de la Rosa
+Copyright (c) 2014, Antonio José Moreno de la Rosa
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
