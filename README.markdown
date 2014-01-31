@@ -15,6 +15,12 @@ How you actually download the bundle is entirely up to you.  The easiest way is 
 Usage examples:
 ---------------
 
+First you must use "text" index in your Document definition 
+
+``` php
+ * @MongoDB\Index(keys={"field"="text"})
+```
+
 The most basic search would be:
 
 ``` php
