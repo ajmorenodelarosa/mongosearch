@@ -1,6 +1,7 @@
 <?php 
 
 namespace MongoSearchBundle\Services\Finder;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Finder {
 
@@ -22,10 +23,20 @@ class Finder {
   }
 
 
-  public function find($query) {
+  public function find($query, $limit=10, $offset=0) {
 
    $result = $this->db->command(array("text" => end(split(":",$this->collectionName)), 'search' => $query ));
-   return $result;
+   $page = array_slice($result['results'], $offset, $limit);
+   $collection = new ArrayCollection();
+   $repository = $this->dm->getRepository($this->collectionName);
+   foreach ($page as $element) {
+    
+      $collection->add($repository->find($element['obj']['_id']));
+ 
+   }
+
+
+   return $collection;
 
   }
 
