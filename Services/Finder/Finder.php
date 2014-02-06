@@ -25,7 +25,8 @@ class Finder {
 
   public function find($query, $limit=10, $offset=0) {
 
-   $result = $this->db->command(array("text" => end(split(":",$this->collectionName)), 'search' => $query ));
+   $splitedName=split(":",$this->collectionName);
+   $result = $this->db->command(array("text" => end($splitedName), 'search' => $query ));
    $page = array_slice($result['results'], $offset, $limit);
    $collection = new ArrayCollection();
    $repository = $this->dm->getRepository($this->collectionName);
