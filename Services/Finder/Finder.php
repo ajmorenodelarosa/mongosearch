@@ -23,10 +23,10 @@ class Finder {
   }
 
 
-  public function find($query, $limit=10, $offset=0) {
+  public function find($query, $limit=10, $offset=0, $filter=array()) {
 
    $splitedName=split(":",$this->collectionName);
-   $result = $this->db->command(array("text" => end($splitedName), 'search' => $query ));
+   $result = $this->db->command(array("text" => end($splitedName), 'search' => $query , 'filter'=>$filter));
    $page = array_slice($result['results'], $offset, $limit);
    $collection = new ArrayCollection();
    $repository = $this->dm->getRepository($this->collectionName);
