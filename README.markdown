@@ -40,8 +40,13 @@ $finder = $this->get('mongosearch.finder')->finder('UserManagementBundle:User',$
 $finder->find("test", $limit, $offset);
 ```
 
-We will work to allow performe more advanced searches in future releases
+We can perform queries adding a filter
 
+``` php
+$db = $this->get('doctrine_mongodb')->getManager();
+$finder = $this->get('mongosearch.finder')->finder('UserManagementBundle:User',$db);
+$finder->find("test", $limit, $offset, array("role"=>"ROLE_ADMIN"));
+```
 
 
 License:
